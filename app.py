@@ -124,6 +124,11 @@ def garantir_base():
     conn.close()
     if count == 0:
         sincronizar_csv_para_sqlite()
+    
+    # REMOVIDO: O código abaixo foi desativado para garantir que o sistema
+    # inicie SEMPRE vazio na primeira vez, esperando o upload do usuário.
+    # if count == 0:
+    #     sincronizar_csv_para_sqlite()
 
 
 def texto_seguro(valor):
